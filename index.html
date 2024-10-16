@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- ========== Start Loader Section ========== -->
+    <div id="loading">
+        <div id="loader"></div>
+    </div>
+    <!-- ========== End Loader Section ========== -->
+
+    <!-- ========== Start Background Section ========== -->
+    <div id="bg"></div>
+    <!-- ========== End Background Section ========== -->
+
+    <section class="container">
+        <!-- ========== Start Search Section ========== -->
+        <div class="weather_header">
+            <form class="weather_search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" spellcheck="false" results=3 class="city_name" autocomplete="off"
+                    placeholder="Search your city..." pattern="[A-Za-z\s]*" id="alphabetInput" />
+                <i class="fa-solid fa-xmark"></i>
+            </form>
+        </div>
+        <!-- ========== End Search Section ========== -->
+
+        <!-- ========== Start Weather Section ========== -->
+        <div class="weather_body">
+            <h1 class="weather_city"></h1>
+            <p class="weather_time_date"></p>
+            <div class="weather_data">
+                <p class="weather_forecast"></p>
+                <div class="weather_icon"></div>
+            </div>
+            <p class="weather_temperature"></p>
+            <div class="weather_minmax">
+                <div class="weather_min"></div>
+                <div class="weather_max"></div>
+            </div>
+        </div>
+        <!-- ========== End Weather Section ========== -->
+
+        <!-- ========== Start Boxs Section ========== -->
+        <div class="weather_cards sm_cards-1">
+            <div class="weather_card">
+                <i class="fa-solid fas fa-thermometer-half"></i>
+                <div>
+                    <p>Feels like</p>
+                    <p class="weather_feels weather_card_info"></p>
+                </div>
+            </div>
+
+            <div class="weather_card">
+                <i class="fa-solid fas fa-hand-holding-water"></i>
+                <div>
+                    <p>Humidity</p>
+                    <p class="weather_humidity weather_card_info"></p>
+                </div>
+            </div>
+
+            <div class="weather_card">
+                <i class="fa-solid fa-wind"></i>
+                <div>
+                    <p>Wind</p>
+                    <p class="weather_wind weather_card_info"></p>
+                </div>
+            </div>
+
+            <div class="weather_card">
+                <i class="fa-solid fa-compass"></i>
+                <div>
+                    <p>Pressure</p>
+                    <p class="weather_pressure weather_card_info"></p>
+                </div>
+            </div>
+        </div>
+        <!-- ========== End Boxs Section ========== -->
+
+    </section>
+
+    
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
